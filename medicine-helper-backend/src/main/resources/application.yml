@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://110.40.223.130:3306/medicine_helper?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimeZone=Aisa/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: nyw+43
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jackson:
+    time-zone: GMT+8
+
+
+mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+
